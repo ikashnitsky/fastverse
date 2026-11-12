@@ -326,9 +326,13 @@ based on the ‘integer64’ class (7 dependencies).</p></li>
 </h4>
 <ul>
 <li><p><strong><a href="https://github.com/deepayan/lattice" class="external-link">lattice</a></strong>: Trellis graphics for R (0 dependencies).</p></li>
-<li><p><strong><a href="https://github.com/cran/grid" class="external-link">grid</a></strong>: The grid graphics package (0 dependencies). &lt;!–</p></li>
-<li><p><strong><a href="https://github.com/vegawidget/vegabrite" class="external-link">vegabrite</a></strong> provides an interface to the <a href="https://vega.github.io/vega-lite/" class="external-link">vega-lite</a> high-level grammar of interactive graphics. –&gt;</p></li>
-<li><p><strong><a href="https://github.com/grantmcdermott/tinyplot" class="external-link">tinyplot</a></strong> provides a lightweight extension of the base R graphics system, with support for automatic grouping, legends, facets, and various other enhancements (0 dependencies).</p></li>
+<li><p><strong><a href="https://github.com/cran/grid" class="external-link">grid</a></strong>: The grid graphics package (0 dependencies).</p></li>
+</ul>
+<!--
+ - **[vegabrite](https://github.com/vegawidget/vegabrite)** provides an interface to the [vega-lite](https://vega.github.io/vega-lite/) high-level grammar of interactive graphics. # ikashnitsky: fixed commenting out
+--><ul>
+<li>
+<strong><a href="https://github.com/grantmcdermott/tinyplot" class="external-link">tinyplot</a></strong> provides a lightweight extension of the base R graphics system, with support for automatic grouping, legends, facets, and various other enhancements (0 dependencies).</li>
 </ul>
 <!-- - **[dygraphs](https://github.com/rstudio/dygraphs)**: Interface to 'Dygraphs' interactive time series charting library (12 dependencies). --><ul>
 <li><p><strong><a href="https://github.com/tidyverse/ggplot2" class="external-link">ggplot2</a></strong>: Create elegant data visualizations using the Grammar of Graphics (15 dependencies).</p></li>
@@ -345,12 +349,11 @@ based on the ‘integer64’ class (7 dependencies).</p></li>
 </h4>
 <ul>
 <li><p><strong><a href="https://github.com/pola-rs/r-polars" class="external-link">r-polars</a></strong> provides an R-port to the impressively fast <a href="https://github.com/pola-rs/polars/" class="external-link">polars DataFrame’s library</a> written in Rust (1 dependencies).</p></li>
+<li><p><strong><a href="https://github.com/etiennebacher/tidypolars" class="external-link">tidypolars</a></strong> <em>tidyverse</em>-style wrapper around <em>r-polars</em>.</p></li>
 <li><p><strong><a href="https://github.com/tidyverse/duckplyr" class="external-link">duckplyr</a></strong> provides a drop-in replacement for dplyr verbs using DuckDB as the backend, enabling fast and memory-efficient data manipulation for large datasets (22 dependencies).</p></li>
-<li>
-<p><strong><a href="https://github.com/chunshengliang/dataprep" class="external-link">dataprep</a></strong>: Fast data preprocessing and reshaping with C++ / OpenMP / SIMD backends, covering missing-value handling, outlier removal, imputation, transformation, and standardization. Its <code>melt()</code> and <code>dcast()</code> are benchmarked as leading solutions (18 dependencies).</p>
-<p><em>Notes</em>: Package <strong><a href="https://github.com/etiennebacher/tidypolars" class="external-link">tidypolars</a></strong> provides a <em>tidyverse</em>-style wrapper around <em>r-polars</em>.</p>
-</li>
+<li><p><strong><a href="https://github.com/chunshengliang/dataprep" class="external-link">dataprep</a></strong>: Fast data preprocessing and reshaping with C++ / OpenMP / SIMD backends, covering missing-value handling, outlier removal, imputation, transformation, and standardization. Its <code>melt()</code> and <code>dcast()</code> are benchmarked as leading solutions (18 dependencies).</p></li>
 </ul>
+<!-- - **[Tidier.jl](https://github.com/TidierOrg/Tidier.jl)** provides a Julia implementation of the tidyverse mini-language in Julia. Powered by the [DataFrames.jl](https://github.com/JuliaData/DataFrames.jl) library. -->
 </div>
 <div class="section level4">
 <h4 id="data-input-output-serialization-and-larger-than-memory-processing-io">Data Input-Output, Serialization, and Larger-Than-Memory Processing (IO)<a class="anchor" aria-label="anchor" href="#data-input-output-serialization-and-larger-than-memory-processing-io"></a>
@@ -361,8 +364,10 @@ based on the ‘integer64’ class (7 dependencies).</p></li>
 <li><p><strong><a href="https://github.com/qsbase/qs" class="external-link">qs</a></strong> provides a lightning-fast and complete replacement for the <code>saveRDS</code> and <code>readRDS</code> functions in R. It supports general R objects with attributes and references - at similar speeds to <em>fst</em> - but does not provide on-disk random access to data subsets like <em>fst</em> (4 dependencies).</p></li>
 <li><p><strong><a href="https://github.com/apache/arrow/tree/master/r" class="external-link">arrow</a></strong> provides both a low-level interface to the Apache Arrow C++ library (a multi-language toolbox for accelerated data interchange and in-memory processing) including fast reading / writing delimited files, efficient storage of data as <code>.parquet</code> or <code>.feather</code> files, efficient (lazy) queries and computations, and sharing data between R and Python (14 dependencies). It provides methods for several <em>dplyr</em> functions allowing highly efficient data manipulation on arrow datasets. Check out the <a href="https://arrow-user2022.netlify.app/" class="external-link">useR2022 workshop</a> on working with larger than memory data with apache arrow in R, and the <a href="https://arrow.apache.org/cookbook/r/index.html" class="external-link">apache arrow R cookbook</a> as well as the <a href="https://github.com/thisisnic/awesome-arrow-r" class="external-link">awesome-arrow-r</a> repository.</p></li>
 <li><p><strong><a href="https://github.com/duckdb/duckdb" class="external-link">duckdb</a></strong>: DuckDB is a high-performance analytical database system that can be used on in-memory or out-of memory data (including csv, <code>.parquet</code> files, arrow datasets, and it’s own <code>.duckdb</code> format), and that provides a rich SQL dialect and optimized query execution for data analysis (1 dependency). It can also be used with the <em>dbplyr</em> package that translates <em>dplyr</em> code to SQL. <a href="https://www.christophenicault.com/post/large_dataframe_arrow_duckdb/" class="external-link">This</a> Article by Christophe Nicault (October 2022) demonstrates the integration of <em>duckdb</em> with R and <em>arrow</em>. Also see the <a href="https://duckdb.org/docs/api/r.html" class="external-link">official docs</a>.</p></li>
+<li><p><strong><a href="https://github.com/tidyverse/vroom" class="external-link">vroom</a></strong> provides fast reading of delimited files (23 dependencies).</p></li>
+<li><p><strong><a href="https://github.com/jcfaria/rcxl" class="external-link">rcxl</a></strong> provides fast reading and writing of Excel files via a Rust backend, supporting both <code>.xlsx</code> and <code>.xls</code> formats (0 dependencies).</p></li>
 <li>
-<p><strong><a href="https://github.com/tidyverse/vroom" class="external-link">vroom</a></strong> provides fast reading of delimited files (23 dependencies).</p>
+<p><strong><a href="https://github.com/swc-yx/rapidxlsx" class="external-link">rapidxlsx</a></strong> provides ultra-fast Excel file reading and writing using Rust, with a focus on performance for large datasets (0 dependency).</p>
 <p><em>Notes</em>: <em>data.table</em> provides <code>fread</code> and <code>fwrite</code> for fast reading of delimited files.</p>
 </li>
 </ul>
@@ -390,14 +395,6 @@ based on the ‘integer64’ class (7 dependencies).</p></li>
 <p><strong><a href="https://github.com/t-kalinowski/quickr" class="external-link">quickr</a></strong> is an R to Fortran transpiler with data type and shape annotations for high performance. <a href="https://CRAN.R-project.org/package=quickr" class="external-link">Available on CRAN</a> (3 dependencies).</p>
 <p><em>Notes</em>: Many of these projects are experimental and not available as CRAN packages.</p>
 </li>
-</ul>
-</div>
-<div class="section level4">
-<h4 id="r-like-data-manipulation-in-faster-languages">R-like Data Manipulation in Faster Languages<a class="anchor" aria-label="anchor" href="#r-like-data-manipulation-in-faster-languages"></a>
-</h4>
-<ul>
-<li><p><strong><a href="https://github.com/markfairbanks/tidypolars" class="external-link">tidypolars</a></strong> is a python library built on top of <a href="https://github.com/pola-rs/polars/" class="external-link">polars</a> that gives access to methods and functions familiar to R tidyverse users.</p></li>
-<li><p><strong><a href="https://github.com/TidierOrg/Tidier.jl" class="external-link">Tidier.jl</a></strong> provides a Julia implementation of the tidyverse mini-language in Julia. Powered by the <a href="https://github.com/JuliaData/DataFrames.jl" class="external-link">DataFrames.jl</a> library.</p></li>
 </ul>
 </div>
 <div class="section level4">
